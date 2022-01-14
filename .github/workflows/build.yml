@@ -1,0 +1,32 @@
+name: Build v2
+
+on:
+  push:
+    branches: [ api8 ]
+  pull_request:
+    branches: [ api8 ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout repo
+
+    - name: Set up JDK 11 (LTS)
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        cache: maven
+
+    - name: Build with Maven
+      run: mvn install --file pom.xml
+
+    - uses: actions/upload-artifact@v2
+      name: Upload Artifact
+      with:
+        name: PacketGate.jar
+        path: target/PacketGate-*.jar
