@@ -3,7 +3,7 @@
 *.ipr
 *.iws
 .idea/
-
+.settings/
 #Gradle
 .gradletasknamecache
 .gradle/
