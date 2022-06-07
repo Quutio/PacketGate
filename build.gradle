@@ -39,6 +39,6 @@ jar {
     )
 }
 
-install {
+/*install {
     dependsOn ':reobfJar'
-}
+}*/

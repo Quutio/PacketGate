@@ -23,7 +23,7 @@ jobs:
         cache: gradle
 
     - name: Build with Gradle
-      run: gradle build
+      run: gradlew build
 
     - uses: actions/upload-artifact@v2
       name: Upload Artifact
