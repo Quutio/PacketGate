@@ -1,0 +1,32 @@
+name: Build API v7
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout repo
+
+    - name: Set up JDK 11 (LTS)
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        cache: gradle
+
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - uses: actions/upload-artifact@v2
+      name: Upload Artifact
+      with:
+        name: PacketGate.jar
+        path: build/libs/PacketGate-*.jar

@@ -4,6 +4,11 @@
 *.iws
 .idea/
 
+# Eclipse project files
+.settings/
+.classpath
+.project
+
 #Gradle
 .gradletasknamecache
 .gradle/

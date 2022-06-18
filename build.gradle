@@ -2,7 +2,7 @@ buildscript {
     repositories {
         maven {
             name = 'forge'
-            url = 'http://files.minecraftforge.net/maven'
+            url = 'https://files.minecraftforge.net/maven'
         }
     }
 
@@ -14,7 +14,6 @@ buildscript {
 plugins {
     id 'org.spongepowered.plugin' version '0.8.1'
     id 'net.minecrell.vanillagradle.server' version '2.2-6'
-    id 'maven'
 }
 
 group = 'eu.crushedpixel.sponge'
@@ -40,6 +39,6 @@ jar {
     )
 }
 
-install {
+/*install {
     dependsOn ':reobfJar'
-}
+}*/

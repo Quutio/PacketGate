@@ -20,7 +20,7 @@ import java.util.List;
 public class PluginPacketGate {
 
     static final String ID = "packetgate";
-    static final String VERSION = "0.1.1";
+    static final String VERSION = "0.1.2";
 
     @Inject
     private Logger logger;

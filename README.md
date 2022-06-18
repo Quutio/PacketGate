@@ -20,9 +20,10 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.CrushedPixel:PacketGate:0.1.2'
+    compile 'com.github.Elikill58:PacketGate:0.1.2'
 }
 ```
+(You can also use `master-SNAPSHOT` or `api8-SNAPSHOT` for latest build)
 
 ## Usage
 The `PacketGate` library provides a `PacketGate` class that acts as the registry for 
